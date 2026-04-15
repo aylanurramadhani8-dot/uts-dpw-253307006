@@ -1,0 +1,179 @@
+/* --- 1. RESET & VARIABEL BIRU --- */
+:root {
+    --primary-blue: #3095c1;
+    --secondary-blue: #6cc4ff;
+    --dark-blue: #195366;
+    --white: #ffffff;
+    --bg-light: #ecf9ff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #ecf9ff 0%, #ddecff 100%);
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: linear-gradient(135deg, var(--dark-blue) 0%, var(--primary-blue) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 35px;
+    border: 6px double var(--white);
+    box-shadow: 0 4px 15px rgba(25, 83, 102, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 4px ridge var(--secondary-blue);
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+nav a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: var(--white);
+    background: var(--primary-blue);
+}
+
+main {
+    flex: 1;
+    max-width: 900px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+.section-box {
+    background: var(--white);
+    border: 3px solid var(--secondary-blue);
+    padding: 25px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(48, 149, 193, 0.05);
+}
+
+.section-box h2 {
+    color: var(--dark-blue);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.jadwal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.jadwal-table th,
+.jadwal-table td {
+    padding: 12px;
+    border: 1px solid #ddecff;
+    text-align: left;
+}
+
+.jadwal-table thead {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.jadwal-table tbody tr:nth-child(even) {
+    background-color: #f0faff;
+}
+
+.jadwal-table tbody tr:hover {
+    background-color: #e0f2ff;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--dark-blue);
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin-top: 5px;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 12px rgba(48, 149, 193, 0.4);
+}
+
+.btn-submit {
+    background: linear-gradient(45deg, var(--dark-blue), var(--primary-blue));
+    color: var(--white);
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(25, 83, 102, 0.3);
+}
+
+.jurusan-item {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 2px dashed var(--secondary-blue);
+    transition: 0.3s;
+}
+
+.jurusan-item:hover {
+    background: var(--bg-light);
+    border-style: solid;
+    border-color: var(--primary-blue);
+    transform: translateX(5px);
+}
+
+footer {
+    background: var(--dark-blue);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
